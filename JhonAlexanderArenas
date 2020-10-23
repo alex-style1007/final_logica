@@ -1,0 +1,35 @@
+import java.util.ArrayList;//permite almacenar datos como los arreglos con la ventaja de no tener que declarar el tamañp//
+import java.util.Scanner;//nos permite leer varios tipos de datos//
+
+public class main {
+    
+    public static int Sumatoria(int[] dato){ // declaramos la funcion de tipo entero// 
+    int suma = 0;//inicia en 0 
+    for(int i = 0; i < dato.length; i++){suma += dato[i];//matriz//
+        }return suma;
+    }public static double Promedio(double[] dato){// declaramos la funcion de tipo punto flotante//
+        double prom = 0;int i;for(i = 0; i < dato.length; i++){prom += dato[i];//matriz
+        } prom = prom/i;return prom;
+    } public static long Factorial(int dato){// declaramos la funcion de tipo entero//
+        long factorial = 1;for(int i = 2; i <= dato; i++){factorial = fact * i;}return factorial;
+    }public static double RN(int n, int dato){// declaramos la funcion de tipo punto flotante//
+        double raiz = 0;raiz = Math.pow(dato, (double)1/n);return raiz;}public static void main(String[] args) {int  n= 0;Scanner sc = new Scanner(System.in);
+        while (n < 1 || n > 4) {System.out.println("1. Sumatoria","2. Promedio","3. Factorial","4. Raíz n-ésima","funcion= ");n = sc.nextInt();
+        } switch (n) {//switch es una instrucción de múltiples vías para enviar ejecucion en diferentes partes del codigo
+            case 1: {int Contador = 0;//empieza en 0
+                int x = 0;while(Contador < 1){ System.out.println("ingresar numero de datos");Contador = sc.nextInt();}int[] datos = new int[Contador];for (int i = 0; i < Contador; i++) {System.out.print("Digite el " + (i+1) + "° dato: ");datos[i] = sc.nextInt();System.out.println("");
+                } x = Sumatoria(datos);System.out.println(" sumatoria= " +x);break;//controlar un bucle//
+            }case 2:{//condicional//
+                int Contador = 0;//empieza en 0
+                double x = 0;while(Contador < 1){System.out.println("ingrese la cantidad n de datos");Contador = sc.nextInt();//creamos un ciclo llamado contador ya que este valor lo utilizaremos//
+                }double[] datos = new double[Contador];// matriz llamada datos de tipo punto flotante//
+                for (int i = 0; i < Contador; i++) {System.out.print("Digite el " + (i+1) + "° dato: ");datos[i] = sc.nextDouble();System.out.println("");}x = Promedio(datos);System.out.println("sumatoria= " +x); break;//controlar un bucle//
+            }case 3:{//condicional//
+                long x = 1;int dato = 0;while(dato < 1){System.out.println("¿A qué dato desea conocerle el factorial?");dato = sc.nextInt();}x = Factorial(dato);System.out.println("El resultado de su factorial es de: " +x); break;//controlar un bucle//
+            }case 4:{//condicional//
+                double x = 0;int dato = -1;int n = -1;while(dato < 0){ System.out.println("¿A qué dato desea conocerle su raíz n-ésima?");dato = sc.nextInt(); }while(n < 1){System.out.println("Digite 'n':");n = sc.nextInt();}x = RN(n, dato);System.out.println(" raíz n-ésima= " +x);break;//controlar un bucle//
+            }
+        }
+    }
+
+}
