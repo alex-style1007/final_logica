@@ -5,11 +5,8 @@ public class main {
     
     public static int Sumatoria(int[] dato){ // declaramos la funcion de tipo entero// 
     int suma = 0;//inicia en 0 
-    for(int i = 0; i < dato.length; i++){suma += dato[i];//matriz//
-        }return suma;
-    }public static double Promedio(double[] dato){// declaramos la funcion de tipo punto flotante//
-        double prom = 0;int i;for(i = 0; i < dato.length; i++){prom += dato[i];//matriz
-        } prom = prom/i;return prom;
+    for(int i = 0; i < dato.length; i++){suma += dato[i];//matriz}return suma;}public static double Promedio(double[] dato){// declaramos la funcion de tipo punto flotante//
+        double prom = 0;int i;for(i = 0; i < dato.length; i++){prom += dato[i];//matriz} prom = prom/i;return prom;
     } public static long Factorial(int dato){// declaramos la funcion de tipo entero//
         long factorial = 1;for(int i = 2; i <= dato; i++){factorial = fact * i;}return factorial;
     }public static double RN(int n, int dato){// declaramos la funcion de tipo punto flotante//
